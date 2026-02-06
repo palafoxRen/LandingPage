@@ -1,9 +1,22 @@
+import { Header, Hero } from "./components"
+
 function App() {
 
   return (
-    <>
-      <h1>Ren Palafox</h1>
-    </>
+    <main className="border border-White w-[375px] m-auto">
+
+      <section className="bg-gray-500 p-6 h-[420px] relative">
+        <Header />
+        <img className="relative z-10 mt-12" src="/public/images/illustration-intro.png" alt="intro illustration" />
+
+        <img className="absolute bottom-0 left-0" src="/public/images/bg-curvy-mobile.svg" alt="bg curvy mobile" />
+      </section>
+
+      <section>
+        <Hero />
+      </section>
+
+    </main>
   )
 }
 
