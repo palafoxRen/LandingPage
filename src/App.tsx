@@ -3,7 +3,7 @@ import { Header, Hero } from "./components"
 function App() {
 
   return (
-    <main className="border border-White w-[375px] m-auto">
+    <main className=" w-[375px] m-auto">
 
       <section className="bg-gray-500 p-6 h-[420px] relative">
         <Header />
@@ -12,7 +12,7 @@ function App() {
         <img className="absolute bottom-0 left-0" src="/public/images/bg-curvy-mobile.svg" alt="bg curvy mobile" />
       </section>
 
-      <section>
+      <section className="bg-Navy-900 p-6">
         <Hero />
       </section>
 
