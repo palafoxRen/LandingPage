@@ -5,3 +5,4 @@ export { Hero } from "./Hero";
 export { Button } from "./Button";
 export { Moreinformation } from "./More-information"; 
 export { Testimonials } from "./Testimonials";
+export { Forms } from "./Forms";
