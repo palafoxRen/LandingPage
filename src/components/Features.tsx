@@ -32,13 +32,13 @@ const FeaturesData : Feature[] = [
 
 export const Features = () => {
     return (
-        <div>
+        <div className="flex flex-col gap-20 mt-[140px]">
             {
                 FeaturesData.map(({title, description, iconUrl}: Feature) => (
+                    <div key={title} className="flex flex-col items-center text-center"> 
+                        <img src={iconUrl} alt={title}/>
                     <div>
-                    <img src={iconUrl} alt={title}/>
-                    <div>
-                        <h3>{title}</h3>
+                        <h3 className="font-bold mb-2">{title}</h3>
                         <p>{description}</p>
                     </div>
                 </div>
