@@ -1,4 +1,6 @@
 import { Contactitem } from "./Contact-item"
+import { Footerlistitem } from "./Footer-list-item";
+import FacebookSVG from '/images/facebook-f-brands-solid-full.svg';
 
 interface ContactInformation {
     text: string;
@@ -24,6 +26,19 @@ const contactInformation: ContactInformation[] = [
     }
 ]
 
+const pages: string[] = [
+    'About us',
+    'Job',
+    'Press',
+    'Blog'
+]
+
+const conditions: string[] = [
+    'Contact us',
+    'Terms',
+    'Privacy'
+]
+
 export const Footer = () => {
     return (
         <footer className="pt-65 pb-[300px] px-6" >
@@ -37,7 +52,29 @@ export const Footer = () => {
             }
             </div>
 
-            
+            <div className="flex flex-col gap-8 mt-16">
+            <ul>
+                {
+                    pages.map((page: string) =>(
+                        <Footerlistitem key={page} text={page} />
+                    ))
+                }
+            </ul>
+
+            <ul>
+                {
+                    conditions.map((condition) => (
+                        <Footerlistitem key={condition} text={condition} />
+                ))
+            }
+            </ul>
+
+            <div className="text-white hover:text-Teal-200 cursor-pointer">
+                <img src="/images/facebook-f-brands-solid-full.svg" alt="facebook" />
+                <FacebookSVG />
+            </div>
+
+            </div>
 
         </footer>
     )
