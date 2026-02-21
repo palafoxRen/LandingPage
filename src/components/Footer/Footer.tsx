@@ -1,67 +1,7 @@
 import { Contactitem } from "./Contact-item"
 import { Footerlistitem } from "./Footer-list-item";
-import { Facebookicon } from "./Facebook-icon";
-import type { JSX } from "react";
-import { Xicon } from "./X-icon";
-import { Instagramicon } from "./Instagram-icon";
-
-interface ContactInformation {
-    text: string;
-    iconUrl: string;
-    alt: string;
-}
-
-const contactInformation: ContactInformation[] = [
-    {
-        text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-        iconUrl:'/images/icon-location.svg',
-        alt:'location'
-    },
-    {
-        text:'+1-543-123-4567',
-        iconUrl:'/images/icon-phone.svg',
-        alt:'icon phone'
-    },
-    {
-        text:'example@fylo.com',
-        iconUrl:'/images/icon-email.svg',
-        alt:'icon email'
-    }
-]
-
-const pages: string[] = [
-    'About us',
-    'Job',
-    'Press',
-    'Blog'
-]
-
-const conditions: string[] = [
-    'Contact us',
-    'Terms',
-    'Privacy'
-]
-
-interface Media {
-    text: string,
-    icon: JSX.Element,
-}
-
-const medias: Media [] = [
-    {
-        text: 'facebook',
-        icon: <Facebookicon />,
-    },
-
-    {
-        text: 'x',
-        icon: <Xicon />
-    },
-    {
-        text: 'instagram',
-        icon: <Instagramicon />
-    }
-]
+import { conditions, contactInformation, pages, medias } from '../../common/Constanst';
+import type { ContactInformation } from "../../Types/Type";
 
 export const Footer = () => {
     return (
@@ -87,14 +27,14 @@ export const Footer = () => {
 
             <ul>
                 {
-                    conditions.map((condition) => (
+                    conditions.map((condition: string) => (
                         <Footerlistitem key={condition} text={condition} />
                 ))
             }
             </ul>
 
             <div className='flex justify-center gap-4'>
-                {medias.map((media: Media) =>(
+                {medias.map((media) =>(
                         <div key={media.text} className="text-white hover:text-Teal-200 cursor-pointer border rounded-full size-[30px] p-0.5">
                             {media.icon}
                         </div>
