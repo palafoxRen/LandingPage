@@ -1,44 +1,18 @@
+import { testimonial } from "../common/Constanst";
+import type { Testimonial } from "../Types/Type";
 import { Testimonialcard } from "./Testimonial-card";
-
-interface Testimonial {
-    name: string;
-    role: string;
-    image: string;
-    quote: string;
-}
-
-const testimonial: Testimonial[] = [
-    {
-        name: 'Satish Patel',
-        role: 'Founder & CEO, Huddle',
-        image: '/images/profile-1.jpg',
-        quote: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.'
-    },
-
-    {
-        name: 'Bruce McKenzie',
-        role: 'Founder & CEO, Huddle',
-        image: '/images/profile-2.jpg',
-        quote: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.'
-    },
-
-    {
-        name: 'Iva Boyd',
-        role: 'Founder & CEO, Huddle',
-        image: '/images/profile-3.jpg',
-        quote: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.'
-    }
-]
 
 export const Testimonials = () => {
     return (
-        <div className="flex flex-col gap-6 items-center pt-6 relative">
-            <img className="size-6 absolute top-0 left-8" src="/images/bg-quotes.png" alt="bg quotes" />
-
+        <div className='flex flex-col gap-6 items-center pt-6 relative w-[320px] md:w-[480px] mx-auto xl:flex-row xl:w-[920px]'>
+            <img className='size-6 absolute top-0 left-8' src="/images/bg-quotes.png" alt="bg quotes" />
             {
-                testimonial.map((testimonial: Testimonial) =>(
-                    <Testimonialcard key={testimonial.name} {...testimonial}/>
-            ))
+                testimonial.map((testimonial: Testimonial) => (
+                    <Testimonialcard
+                        key={testimonial.name}
+                        {...testimonial}
+                    />
+                ))
             }
         </div>
     )

@@ -11,3 +11,15 @@ export interface Media {
     icon: JSX.Element,
 }
 
+export interface Testimonial {
+    name: string;
+    role: string;
+    image: string;
+    quote: string;
+}
+
+export interface Feature {
+    title: string;
+    description: string;
+    iconUrl: string;
+}

@@ -7,7 +7,7 @@ export const Forms = () => {
     const [inputValue, setInputValue] = useState<string>('');
     const [error, setError] = useState<boolean>(false)
 
-    const handleSubmit = (e: FormEvent) => {
+    function handleSubmit(e: FormEvent) {
         e.preventDefault();
 
         const regExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
